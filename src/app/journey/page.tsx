@@ -3,7 +3,7 @@
 import React from "react";
 import { Card } from "@/components/ui/Card";
 import { useStore } from "@/lib/store";
-import { Flame, Star, Award, CheckCircle } from "lucide-react";
+import { Flame, Star, CheckCircle } from "lucide-react";
 
 export default function JourneyPage() {
   const { streak, xp } = useStore();
@@ -76,3 +76,4 @@ export default function JourneyPage() {
     </div>
   );
 }
+
