@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0F0F0F;
+    --foreground: #F5F5F5;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  /* Smooth scrolling for anchor links if any */
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0F0F0F;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1E3A8A;
+}
+
+/* Base selection color */
+::selection {
+  background: rgba(245, 158, 11, 0.3); /* Saffron with low opacity */
+  color: #F5F5F5;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-panel {
+    @apply bg-background-secondary/60 backdrop-blur-md border border-border/50 shadow-lg;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] hover:border-[rgba(245,158,11,0.3)];
+  }
+  
+  .premium-text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-text-primary via-accent to-text-primary bg-[length:200%_auto] animate-[pulse-glow_4s_cubic-bezier(0.4,0,0.6,1)_infinite];
+  }
+}
