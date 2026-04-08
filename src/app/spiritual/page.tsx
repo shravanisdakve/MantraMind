@@ -75,6 +75,8 @@ export default function SpiritualPage() {
       <div className="absolute bottom-0 left-0 right-0 pt-4 bg-gradient-to-t from-background via-background to-transparent">
         <div className="glass-panel rounded-full p-2 flex items-center pr-4 border border-secondary/30">
           <input
+            id="gita-input"
+            name="question"
             type="text"
             className="flex-1 bg-transparent border-none outline-none px-4 text-text-primary placeholder:text-text-secondary"
             placeholder="Ask Arjuna's questions..."
@@ -90,3 +92,4 @@ export default function SpiritualPage() {
     </div>
   );
 }
+

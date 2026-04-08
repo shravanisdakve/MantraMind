@@ -50,7 +50,7 @@ export default function ChatPage() {
           </div>
         )}
         
-        {messages.map((m, i) => (
+        {messages.map((m) => (
           <motion.div 
             key={m.id} 
             initial={{ opacity: 0, y: 10 }}
@@ -77,6 +77,8 @@ export default function ChatPage() {
       <div className="absolute bottom-0 left-0 right-0 pt-4 bg-gradient-to-t from-background via-background to-transparent">
         <div className="glass-panel rounded-full p-2 flex items-center pr-4 shadow-[0_-5px_20px_rgba(0,0,0,0.3)] border border-border/60">
           <input
+            id="chat-input"
+            name="message"
             type="text"
             className="flex-1 bg-transparent border-none outline-none px-4 text-text-primary placeholder:text-text-secondary"
             placeholder="Express your thoughts..."
@@ -92,3 +94,4 @@ export default function ChatPage() {
     </div>
   );
 }
+
